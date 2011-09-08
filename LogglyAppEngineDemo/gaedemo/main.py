@@ -7,8 +7,8 @@ import logging
 import loggly
 
 #Global
-ep="https://logs.loggly.com/inputs/8f4e64db-f994-43c5-b147-2327b23680d2"
-HOOVER = loggly.LogglyLogger(endpoint=ep,
+epoint = "https://logs.loggly.com/inputs/8f4e64db-f994-43c5-b147-2327b23680d2"
+HOOVER = loggly.LogglyLogger(endpoint=epoint,
         level=logging.INFO)
 
 class MainHandler(webapp.RequestHandler):
