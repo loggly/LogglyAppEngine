@@ -35,6 +35,7 @@ class LogglyHTTPSHandler(handlers.MemoryHandler):
         for record in self.buffer:
             stuff += self.format(record)
             urlfetch.make_fetch_call(rpc,
+                                    headers={'Content-Type': 'plain/text'},
                                     url=self.endpoint,
                                     payload=stuff,
                                     method=urlfetch.POST)
