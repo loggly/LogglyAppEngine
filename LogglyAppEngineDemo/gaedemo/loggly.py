@@ -31,7 +31,7 @@ class LogglyHTTPSHandler(handlers.MemoryHandler):
         """
         
         rpc = urlfetch.create_rpc()
-        stuff = "source=%s-%s" % (self.appname, self.version)
+        stuff = "app=%s version=%s " % (self.appname, self.version)
         for record in self.buffer:
             stuff += self.format(record)
             urlfetch.make_fetch_call(rpc,
